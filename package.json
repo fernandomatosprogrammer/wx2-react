@@ -1,6 +1,6 @@
 {
   "name": "wx2-react",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple framework to react productivity",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -25,7 +25,8 @@
   "homepage": "https://github.com/fernandomatosprogrammer/wx2-react#readme",
   "peerDependencies": {
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "moment": "^2.27.0"
   },
   "devDependencies": {
     "@babel/cli": "7.10.5",
