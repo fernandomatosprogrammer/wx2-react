@@ -1,0 +1,41 @@
+{
+  "name": "wx2-react",
+  "version": "1.0.6",
+  "description": "Simple framework to react productivity",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir dist --extensions .ts,.tsx",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fernandomatosprogrammer/wx2-react.git"
+  },
+  "keywords": [
+    "react",
+    "react framework"
+  ],
+  "author": "Fernando Prudente de Matos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fernandomatosprogrammer/wx2-react/issues"
+  },
+  "homepage": "https://github.com/fernandomatosprogrammer/wx2-react#readme",
+  "peerDependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.10.5",
+    "@babel/core": "7.10.5",
+    "@babel/preset-env": "7.10.4",
+    "@babel/preset-react": "7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "moment": "^2.27.0",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "typescript": "^3.9.7"
+  }
+}
