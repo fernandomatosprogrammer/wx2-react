@@ -1,4 +1,4 @@
-export default (err) => {
+export default (err: any) => {
     if(!err.response) 
         return mapToErrorMessage('Aparentemente você está sem internet. Caso esse não seja o problema, entre em contato conosco.')
     
@@ -16,15 +16,15 @@ export default (err) => {
     }
 }
 
-const mapToAlertMessage = (message) => {
+const mapToAlertMessage = (message: string) => {
     return mapToMessage('alert', message)
 }
 
-const mapToErrorMessage = (message) => {
+const mapToErrorMessage = (message: string) => {
     return mapToMessage('error', message)
 }
 
-const mapToMessage = (type, message) => {
+const mapToMessage = (type: string, message: string) => {
     return {
         type,
         message

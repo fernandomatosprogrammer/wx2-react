@@ -1,4 +1,11 @@
-export default ({messageError, redirectTo, data}) => {
+export type ServerSidePropsFactoryType = {
+    messageError?: any,
+    redirectTo?: string,
+    data?: any}
+
+
+export default (param: ServerSidePropsFactoryType) => {
+    let {messageError, redirectTo, data} = param
     data = data || undefined
     let responseType = 'success'
 

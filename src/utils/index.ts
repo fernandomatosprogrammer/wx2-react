@@ -1,13 +1,16 @@
 import mapResponseError from './mapResponseError'
 import stringUtil from './stringUtil'
-import serverSidePropsFactory from './serverSidePropsFactory'
-import modelValidate from './modelValidate'
+import serverSidePropsFactory, {ServerSidePropsFactoryType} from './serverSidePropsFactory'
+import modelValidate, {ModelRuleType, ModelRuleErrorType} from './modelValidate'
 
 export {
     mapResponseError,
     stringUtil,
     serverSidePropsFactory,
-    modelValidate    
+    modelValidate,
+    ServerSidePropsFactoryType,
+    ModelRuleType,
+    ModelRuleErrorType
 }
 
 export default {

@@ -1,7 +1,17 @@
 import { useState, useEffect } from "react"
-import modelValidate from "../utils/modelValidate"
+import modelValidate, {ModelRuleType} from "../utils/modelValidate"
 
-export default ({initialModelValue, modelRules, asyncSubmit, submitSucessCallback, submitErrorCallback, asyncLoadModel}) => {    
+export type UseFormParamType = {
+    initialModelValue: any,
+    modelRules: ModelRuleType[],
+    asyncSubmit: () => Promise<any>,
+    submitSucessCallback?: () => void,
+    submitErrorCallback?: () => void,
+    asyncLoadModel?: () => Promise<any>
+}
+
+export default (param: UseFormParamType) => {    
+    const {initialModelValue, modelRules, asyncSubmit, submitSucessCallback, submitErrorCallback, asyncLoadModel} = param
     const [model, setModel] = useState(initialModelValue || {})
     const [modelDirty, setModelDirty] = useState(false)
     const [errors, setErrors] = useState([])
@@ -35,11 +45,11 @@ export default ({initialModelValue, modelRules, asyncSubmit, submitSucessCallbac
 
     const validate = () => {
         const errors = modelValidate(model, modelRules)
-        setErrors(errors)
+        setErrors(<[]>errors)
         return errors
     }
 
-    const submit = async (event) => {
+    const submit = async (event: Event) => {
         event.preventDefault()
 
         setHasSubmit(true)
