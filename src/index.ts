@@ -1,17 +1,8 @@
-import {UseFormParamType, useForm} from './hooks'
-import {ModelRuleErrorType, ModelRuleType, ServerSidePropsFactoryType, mapResponseError,modelValidate,serverSidePropsFactory,stringUtil} from './utils'
+import hooks from './hooks'
+import util from './utils'
 
-export {
-    UseFormParamType,
-    useForm,
-    ModelRuleErrorType,
-    ModelRuleType,
-    ServerSidePropsFactoryType,
-    mapResponseError,
-    modelValidate,
-    serverSidePropsFactory,
-    stringUtil
-}
+export const {useForm} = hooks
+export const {mapResponseError,modelValidate,serverSidePropsFactory,stringUtil} = util
 
 export default {
     useForm,

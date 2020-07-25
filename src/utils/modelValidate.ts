@@ -1,10 +1,10 @@
 
-export type ModelRuleType = {
+export interface ModelRuleType {
     field: string,
     valid: (value: any, errors: any[], model?: any) => void
 }
 
-export type ModelRuleErrorType = {
+export interface ModelRuleErrorType {
     field: string,
     errors: string[]
 }

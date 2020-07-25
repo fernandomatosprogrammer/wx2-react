@@ -1,8 +1,7 @@
-import useForm, {UseFormParamType} from './useForm'
+import useForm from './useForm'
 
 export {
-    useForm,
-    UseFormParamType
+    useForm
 }
 
 export default {

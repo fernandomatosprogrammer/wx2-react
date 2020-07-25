@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import modelValidate, {ModelRuleType} from "../utils/modelValidate"
 
-export type UseFormParamType = {
+export interface UseFormParamType {
     initialModelValue: any,
     modelRules: ModelRuleType[],
     asyncSubmit: () => Promise<any>,

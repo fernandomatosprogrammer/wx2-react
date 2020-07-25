@@ -1,4 +1,4 @@
-export type ServerSidePropsFactoryType = {
+export interface ServerSidePropsFactoryType {
     messageError?: any,
     redirectTo?: string,
     data?: any}
