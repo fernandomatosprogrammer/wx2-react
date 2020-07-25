@@ -1,7 +1,7 @@
 
 export type ModelRuleType = {
     field: string,
-    valid: (value: any, errors: any[], model: any) => void
+    valid: (value: any, errors: any[], model?: any) => void
 }
 
 export type ModelRuleErrorType = {
