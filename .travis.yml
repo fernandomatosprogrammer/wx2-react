@@ -1,0 +1,10 @@
+language: node_js
+branches:
+    only:
+    - master
+node_js: 
+    - "12"
+before_install:
+    - npm i
+install:    
+    - npm run build

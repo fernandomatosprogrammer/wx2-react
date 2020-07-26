@@ -6,8 +6,10 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src --out-dir dist --extensions .ts,.tsx",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "build": "npm run tsc & babel src --out-dir dist --extensions .ts,.tsx",
+    "publish": "npm run build & npm publish"
+    
   },
   "repository": {
     "type": "git",
