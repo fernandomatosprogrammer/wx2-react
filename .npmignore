@@ -1,0 +1,11 @@
+!hooks
+!utils
+!index.js
+!index.d.ts
+
+dist
+node_modules
+src
+.travis.yml
+tsconfig.json
+.babelrc

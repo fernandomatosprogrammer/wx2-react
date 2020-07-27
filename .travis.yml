@@ -1,11 +1,14 @@
 language: node_js
 node_js: 
     - "12"
-before_install:
+before_script:
     - npm i
-install:    
-    - npm run build
-    branches:
-        only:
-        - master
-    
+script:    
+    - npm run build    
+deploy: 
+    provider: npm
+    skip_cleanup: true
+    email: $API_ACCOUNT
+    api_key: $API_KEY
+    on:
+        branch: master

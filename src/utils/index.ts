@@ -7,7 +7,7 @@ export {
     mapResponseError,
     stringUtil,
     serverSidePropsFactory,
-    modelValidate    
+    modelValidate     
 }
 
 export default {
