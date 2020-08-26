@@ -1,6 +1,6 @@
 {
   "name": "wx2-react",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "Simple framework to react productivity",
   "main": "./index.js",
   "types": "./index.d.ts",
