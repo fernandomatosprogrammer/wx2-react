@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, EventHandler } from "react"
 import modelValidate, {ModelRuleType} from "../utils/modelValidate"
 
 export interface UseFormParamType {
@@ -71,6 +71,18 @@ export default (param: UseFormParamType) => {
             })
     }
 
+    const changeModel = (event: any) => {
+        const {target} = event        
+        setModel((m: any) => {
+            return {
+                ...m,
+                [target.name]: target.value
+            }
+        })        
+    }    
+
+    const fieldIsInvalid = (field: any) => errors.some((x: any) => x.field === field)
+
     return [
         model,
         setModel,
@@ -80,7 +92,9 @@ export default (param: UseFormParamType) => {
             modelLoaded,
             modelDirty,
             hasSubmit,
-            submit
+            submit,
+            changeModel,
+            fieldIsInvalid
         }                
     ]
 }
