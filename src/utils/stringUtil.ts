@@ -7,7 +7,10 @@ const emailIsValid = (email: string) => {
 
 const getDatetimeString = (value: Date) => value ? moment(value).format('DD/MM/YYYY hh:mm') : ''
 
+const isValidDate = (value: any) => moment(value).isValid()
+
 export default {
     emailIsValid,
-    getDatetimeString
+    getDatetimeString,
+    isValidDate
 }
